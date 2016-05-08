@@ -19,6 +19,11 @@ Once Visual Studio 2015 is installed, building the cx_Freeze Wheel is very easy:
 2. Install the Wheel package with `pip install wheel`.
 3. Either clone the cx_Freeze repository or download a
    [snapshot of the lastest version](https://bitbucket.org/anthony_tuininga/cx_freeze/downloads).
+4. If you also want to build Windows services with cx_Freeze, you need to go through the 
+   following steps to build the dependency package cx_Logging:
+   a. Download the source code from (https://sourceforge.net/projects/cx-logging/files/2.1/)
+   b. Expand the source in a folder next to the folder where you expanded the cx_Freeze code
+   c. Build the package with `python setup.py bdist`
 4. Build the Wheel with `python setup.py bdist_wheel`. You'll find the result in the `dist`
    directory.
 5. Now you can install the created (or downloaded) Wheel with
